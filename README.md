@@ -20,3 +20,15 @@ THEN the game is over
 WHEN the game is over
 THEN I can save my initials and score
 
+## Languages & Packages
+
+- JavaScript
+- html
+- CSS
+
+## Screenshots
+![image]()
+
+## Live App
+
+[Link]()

@@ -5,26 +5,60 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quiz 4 Coders</title>
-    <link rel="stylesheet" href="./assets/css/style.css"
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" href="./assets/css/styles.css" />
 </head>
-<body>
-    <header>
-       <div class="scores">Scores</div>
-       <div class="timer">Time: </div>
-       <div id="Start-quiz" class= "Start"></div>
-       <h1> Test your Knowledge</h1>
-       <p>
+</head>
+<body style= "background-color: rgb(207, 243, 247);">
+
+   <div class="Welcome">
+
+       <h1 class="text-center"> Test your Knowledge </h1>
+       <p class="mx-auto" style= "width:500px;">
            Test yourself by answering the following questions. It is a timed quiz, if you are not sure, go with your best guess. 
            You will lose time for every incorrect answer! Don't give up, challenge yourself and try to beat your highest score!
            Good luck!
        </p>
-      </header>
+       <button type="startbtn" class="btn btn-light btn-outline-dark d-grid gap-2 col-2 mx-auto">Start</button>
+           
+   </div>
+   <div class="timer-container">
+       <h5 class="timer-text">
+           Timer: <h3 class="timer">30</h3>
+       </h5>
+   </div>
+     
     
-      <main class="question"> 
+      <main class="question-container mx-auto" style="width:300px;">
+    
+          <h1 class="question-text">Question Appears Here</h1>
+          <div class="answer-container">
 
+            <button>1.AAAA</button>
+            <button>2.BBBBB</button>
+            <button>3.CCCC</button>
+            <button>4.DDDD</button>
+            
+        </div>
+        
+        
+    </main>
+    <h4 class="answer-status mx-auto" style="width: 100px;">Correct</h4>
+       <div class="end-container">
+           <h1 class="score-display">Score: 10</h1>
+           <div class="form">
+               <input type="text" class="user-initial" placeholder="Enter Initials">
+               <button class="submit-btn ">Submit</button>
+           </div>
+           <div class="highscore-container">
+               <h2 class="highscore-header">Highscores</h2>
+               <ul class="highscore-list">
 
-      </main>
-       
+               </ul>
+
+           </div>
+       </div>
     
     
       <footer>
