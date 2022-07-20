@@ -49,7 +49,7 @@ endContainer.style.display='none';
 
 startBtn.addEventListener('click', function(){
 
-    startQuiz()
+    startQuiz();
 })
 
 
@@ -57,18 +57,38 @@ function startQuiz (){
     welcomeContainer.style.display='none';
     questionContainer.style.display='block';
     timerContainer.style.display='block';
-    setTimer()
+    setTimer();
+    showQuestion();
 }
 
-var quizTime = 10;
+var quizTime = 30;
 function setTimer (){
-    setInterval(function (){
+    var timeTicking =setInterval(function (){
         quizTime--;
         timer.textContent=quizTime;
 
         if (quizTime ===0){
-            clearInterval(setTimer)
+            clearInterval(timeTicking);
         }
     },1000)
+
+}
+
+var questionIndex =0;
+function showQuestion (){
+    questionText.textContent=questions[questionIndex].question;
+    var options=questions[questionIndex].options;
+    // console.log(answers);
+    options.forEach(function(option){
+        var optionBtn =document.createElement('button');
+        optionBtn.textContent=option;
+        answersContainer.appendChild(optionBtn);
+    })
+}
+
+function checkAnswer (answer){
+    if (answer===questions[questionIndex].answer){
+        console.log('correct');
+    }
 
 }
