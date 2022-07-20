@@ -12,3 +12,17 @@ body{
     position: absolute; top: 10px;
     right: 5px;
 }
+.answers-container {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+.answers-container>button{
+    margin-bottom: 10px;
+    border-radius: 10px;
+    outline: none;
+}
+.answers-container>button:hover{
+    background-color: black;
+    color: white;
+}

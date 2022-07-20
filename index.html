@@ -10,9 +10,9 @@
     <link rel="stylesheet" href="./assets/css/styles.css" />
 </head>
 </head>
-<body style= "background-color: rgb(207, 243, 247);">
+<body style= "background-color: rgb(197, 224, 228);">
 
-   <div class="Welcome">
+   <div class="welcome">
 
        <h1 class="text-center"> Test your Knowledge </h1>
        <p class="mx-auto" style= "width:500px;">
@@ -20,10 +20,10 @@
            You will lose time for every incorrect answer! Don't give up, challenge yourself and try to beat your highest score!
            Good luck!
        </p>
-       <button type="startbtn" class="btn btn-light btn-outline-dark d-grid gap-2 col-2 mx-auto">Start</button>
+       <button id= "quiz" class="startbtn btn btn-light btn-outline-dark d-grid gap-2 col-2 mx-auto">Start</button>
            
    </div>
-   <div class="timer-container">
+   <div id ="timer" class="timer-container">
        <h5 class="timer-text">
            Timer: <h3 class="timer">30</h3>
        </h5>
@@ -33,7 +33,7 @@
       <main class="question-container mx-auto" style="width:300px;">
     
           <h1 class="question-text">Question Appears Here</h1>
-          <div class="answer-container">
+          <div class="answers-container">
 
             <button>1.AAAA</button>
             <button>2.BBBBB</button>
@@ -42,16 +42,18 @@
             
         </div>
         
+        <h4 " class="answer-status mx-auto" style="width: 100px;">Correct</h4>
         
     </main>
-    <h4 class="answer-status mx-auto" style="width: 100px;">Correct</h4>
        <div class="end-container">
+
            <h1 class="score-display">Score: 10</h1>
            <div class="form">
                <input type="text" class="user-initial" placeholder="Enter Initials">
-               <button class="submit-btn ">Submit</button>
+               <button id="submit" class="submit-btn ">Submit</button>
            </div>
-           <div class="highscore-container">
+           
+           <div id="highscore-container">
                <h2 class="highscore-header">Highscores</h2>
                <ul class="highscore-list">
 
