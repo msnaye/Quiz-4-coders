@@ -14,6 +14,8 @@ var highscoreContainer = document.querySelector('#highscore-container');
 var highscoreHeader = document.querySelector('.highscore-header');
 var highscoreList = document.querySelector('.highscore-list');
 
+var questionIndex =0;
+
 
 var questions = [
     {
@@ -58,7 +60,7 @@ function startQuiz (){
     questionContainer.style.display='block';
     timerContainer.style.display='block';
     setTimer();
-    showQuestion();
+    showQuestion(questionIndex);
 }
 
 var quizTime = 30;
@@ -74,21 +76,38 @@ function setTimer (){
 
 }
 
-var questionIndex =0;
-function showQuestion (){
-    questionText.textContent=questions[questionIndex].question;
-    var options=questions[questionIndex].options;
+
+function showQuestion (q){
+    answersContainer.innerHTML='';
+    questionText.textContent=questions[q].question;
+    var options=questions[q].options;
     // console.log(answers);
     options.forEach(function(option){
         var optionBtn =document.createElement('button');
         optionBtn.textContent=option;
         answersContainer.appendChild(optionBtn);
+        optionBtn.addEventListener('click', function(){
+            //console.log(optionBtn.textContent);
+            checkAnswer(optionBtn.textContent);
+        })
     })
 }
 
 function checkAnswer (answer){
     if (answer===questions[questionIndex].answer){
         console.log('correct');
+    } else {
+        console.log('incorrect');
+    }
+    questionIndex++
+    if (questionIndex<questions.length){
+        showQuestion(questionIndex)
+
+    }else {
+        console.log('done');
+        timerContainer.style.display='none';
+        questionContainer.style.display='none';
+        endContainer.style.display='block';
     }
 
 }
