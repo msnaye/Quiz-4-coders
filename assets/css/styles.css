@@ -1,5 +1,5 @@
 body{
-    font-family: "Helvetica Neue",Helvetica,Arial;
+    font-family: 'Times New Roman', Times, serif;
     font-size: 120%;
 }
 
@@ -8,21 +8,61 @@ body{
     left: 10px;
 
 }
-.score-display {
-    position: absolute; top: 10px;
-    right: 5px;
-}
+
 .answers-container {
     display: flex;
     justify-content: space-between;
     flex-direction: column;
 }
+
 .answers-container>button{
     margin-bottom: 10px;
     border-radius: 10px;
     outline: none;
 }
+
 .answers-container>button:hover{
     background-color: black;
     color: white;
+}
+.answers-container{
+    margin-top: 50px;
+}
+
+.end-container{
+    margin:8rem;
+    
+}
+
+.score-display {
+    position: absolute; top: 10px;
+    right: 5px;
+   
+}
+
+.text-center{
+    margin-top: 150px;
+}
+
+.question-container{
+    margin-top: 150px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.answer-status{
+    margin-top: 50px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+#highscore-container {
+    font-family: 'Times New Roman', Times, serif;
+    margin: 10px;
+}
+
+.back{
+    margin: 2rem;
+}
+.mx-auto{
+    font-size: 22px;
+
 }
