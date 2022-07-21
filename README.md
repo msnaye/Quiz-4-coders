@@ -1,5 +1,14 @@
 # Quiz-4-coders
 
+## Table of Contents  
+
+- [User-Story](#User-Story)
+- [Acceptance-Criteria](#Acceptance-Criteria)
+- [Technologies](#Technologies)
+- [Screenshot](#Screenshot)
+- [Live-App](#Live-app)
+
+
 ## User Story 
 
 AS A coding boot camp student
@@ -20,13 +29,13 @@ THEN the game is over
 WHEN the game is over
 THEN I can save my initials and score
 
-## Languages & Packages
+## Technologies
 
 - JavaScript
 - html
 - CSS
 
-## Screenshots
+## Screenshot
 ![image]()
 
 ## Live App
