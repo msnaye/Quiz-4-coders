@@ -15,7 +15,7 @@ var highscoreHeader = document.querySelector('.highscore-header');
 var highscoreList = document.querySelector('.highscore-list');
 
 var questionIndex =0;
-
+var score = 0;
 
 var questions = [
     {
@@ -31,12 +31,12 @@ var questions = [
     {
         question: 'The condition in an if/else statement is enclosed with: ',
         options: ['parenthesis', 'quotes' ,'curly brackets', 'square brackets'],
-        answer: 'parentheses'
+        answer: 'parenthesis'
     },
     {
         question: 'String values must be enclosed within _______ when being assigned to variables.',
         options: ['commas', 'quotes' ,'curly brackets', 'parentheses'],
-        answer: 'curly brackets'
+        answer: 'quotes'
     },
     {
         question: 'A very useful tool used for development and debugging for printing content to the debugger is:',
@@ -95,9 +95,13 @@ function showQuestion (q){
 
 function checkAnswer (answer){
     if (answer===questions[questionIndex].answer){
-        console.log('correct');
+        //console.log('correct');
+        score=score+5
+        answerStatus.textContent='correct';
+
     } else {
-        console.log('incorrect');
+        //console.log('incorrect');
+        answerStatus.textContent='incorrect';
     }
     questionIndex++
     if (questionIndex<questions.length){
@@ -108,6 +112,19 @@ function checkAnswer (answer){
         timerContainer.style.display='none';
         questionContainer.style.display='none';
         endContainer.style.display='block';
+        scoreDisplay.textContent='Score: '+ score;
+        submitBtn.addEventListener('click',function(event){
+            event.preventDefault();
+            trackScore(score);
+        })
     }
 
+}
+
+function trackScore (s){
+   var userInfo = {
+       initial: userInitial.value,
+       score: s
+   } 
+   console.log(userInfo);
 }
