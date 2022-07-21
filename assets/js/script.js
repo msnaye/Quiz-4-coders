@@ -121,10 +121,24 @@ function checkAnswer (answer){
 
 }
 
+var userInfoArray = [];
+
 function trackScore (s){
    var userInfo = {
        initial: userInitial.value,
        score: s
    } 
-   console.log(userInfo);
+   //console.log(userInfo);
+   userInfoArray.push(userInfo);
+   
+       localStorage.setItem('userInfo',JSON.stringify(userInfoArray));
+       showHighscore(userInfoArray);
+   
+}
+function showHighscore (array){
+    for (var i=0; i<array.length; i++){
+        var userInfoLi =document.createElement('li');
+        userInfoLi.textContent= array[i].initial+ ' '+ array[i].score
+        highscoreList.appendChild(userInfoLi);
+    };
 }
