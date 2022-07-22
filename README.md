@@ -36,7 +36,9 @@ THEN I can save my initials and score
 - CSS
 
 ## Screenshot
-![image]()
+![image](./assets/images/Quiz.png)
+![image](./assets/images/Quiz-2.png)
+![image](./assets/images/Quiz-3.png)
 
 ## Live App
 
